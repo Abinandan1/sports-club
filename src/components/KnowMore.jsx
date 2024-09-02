@@ -36,10 +36,6 @@ const KnowMore = () => {
   ];
   const [currentImage, setCurrentImage] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  const handleNavigation = () => {
-    const navigate = useNavigate();
-    navigate("/");
-  };
   return (
     <Wrapper>
       <nav>
@@ -53,12 +49,8 @@ const KnowMore = () => {
             </Link>
 
             <div className="nav-buttons-container">
-              <Link to="/register" className="btn">
-                join us
-              </Link>
-              <Link to="/login" className="btn btn-hipster">
-                login
-              </Link>
+              <button className="btn">join us</button>
+              <button className="btn btn-hipster">login</button>
               <button
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                 className="theme-btn"
