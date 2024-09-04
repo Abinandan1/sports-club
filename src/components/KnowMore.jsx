@@ -1,6 +1,6 @@
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { Wrapper } from "../wrappers/KnowMore";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAppContext } from "../App";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -269,7 +269,58 @@ const KnowMore = () => {
                 </div>
               </div>
             )}
-            {/* ARCHIVE */}
+            {/* AUTHORITIES */}
+            <div className="section authorities">
+              <h5 className="title">authorities</h5>
+              <table className="authority-table">
+                <thead>
+                  <tr>
+                    <th scope="column">name</th>
+                    <th scope="column">designation</th>
+                    <th scope="column">email</th>
+                    <th scope="column">cabin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Peter Craig</td>
+                    <td>Chief Sports Secretary</td>
+                    <td>petercraig@dps.com</td>
+                    <td>2nd floor, DPE Office, Academic Block</td>
+                  </tr>
+                  <tr>
+                    <td>Nick Murray</td>
+                    <td>Tennis Coach</td>
+                    <td>nickmurray@dps.com</td>
+                    <td>1st floor,DPE Office, Academic Block</td>
+                  </tr>
+                  <tr>
+                    <td>Roger Sanders</td>
+                    <td>Physical Director</td>
+                    <td>rogersanders@dps.com</td>
+                    <td>1st floor, DPE Office, Academic Block</td>
+                  </tr>
+                  <tr>
+                    <td>Amy Connors</td>
+                    <td>Nutritionist</td>
+                    <td>amyconnors@dps.com</td>
+                    <td>3rd floor, DPE Office, Academic Block</td>
+                  </tr>
+                  <tr>
+                    <td>Wayde Van Niekerk</td>
+                    <td>Athletics Coach</td>
+                    <td>vanniekerk@dps.com</td>
+                    <td>2nd floor, DPE Office, Academic Block</td>
+                  </tr>
+                  <tr>
+                    <td>Aaron Brown</td>
+                    <td>Cricket Coach</td>
+                    <td>aaronbrow@dps.com</td>
+                    <td>2nd floor, DPE Office, Academic Block</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             {/* ACHIEVEMENTS */}
           </div>
         </div>

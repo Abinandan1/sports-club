@@ -9,6 +9,7 @@ export const Wrapper = styled.footer`
     display: grid;
     place-items: center;
     gap: 2rem;
+    text-align: center;
   }
   .social-icons {
     display: flex;

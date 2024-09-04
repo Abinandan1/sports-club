@@ -34,7 +34,10 @@ const Footer = () => {
           </div>
           <div className="copyright-info">
             <p>
-              <span>&copy; 2024 Sports Club. All rights reserved.</span>
+              <span>
+                &copy; 2024 Sports Club of District Public School. All rights
+                reserved.
+              </span>
             </p>
           </div>
         </div>

@@ -2,12 +2,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./pages";
 import { KnowMore } from "./components";
 import { createContext, useContext, useEffect, useState } from "react";
-
+import { action as contactAction } from "./components/Contact";
 const AppContext = createContext();
 const router = createBrowserRouter([
   {
     path: "",
     element: <Home />,
+    action: contactAction,
   },
   {
     path: "/about-us",

@@ -299,6 +299,40 @@ export const Wrapper = styled.section`
   .modal-main-img-container.next {
     transform: translate(100%, -50%);
   }
+  /* AUTHORITIES */
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+  }
+  tr,
+  th,
+  td {
+    border: 1px solid var(--main-bg-color);
+    padding: 1rem;
+    color: var(--text-color);
+    word-break: break-all;
+  }
+
+  /* th:nth-child(4) {
+    display: none;
+  }
+  td:nth-child(4) {
+    display: none;
+  } */
+  th {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--white);
+    background: var(--gray-500);
+  }
+  tr:nth-child(even) {
+    background: var(--gray-200);
+    td {
+      color: var(--black);
+    }
+  }
   @media (width>=768px) {
     .title {
       margin-bottom: 5rem;
