@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Wrapper } from "../wrappers/Contact";
-import { Form } from "react-router-dom";
+import { Form, useNavigation } from "react-router-dom";
 import { notify } from "./Notification";
 export const action = async ({ request }) => {
   const formData = await request.formData();
@@ -22,6 +22,8 @@ export const action = async ({ request }) => {
   return null;
 };
 const Contact = () => {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
   return (
     <Wrapper id="contact" onSubmit={(e) => e.preventDefault()}>
       <div className="section-center">
@@ -52,8 +54,12 @@ const Contact = () => {
                 className="form-input"
               />
             </div>
-            <button type="submit" className="btn contact-btn">
-              submit
+            <button
+              disabled={isSubmitting}
+              type="submit"
+              className="btn contact-btn"
+            >
+              {isSubmitting ? "submitting..." : "submit"}
             </button>
           </Form>
         </div>
