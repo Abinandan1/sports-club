@@ -145,3 +145,29 @@ h6 {
     font-size: 1.5rem;
   }
 }
+
+.notification {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background: var(--gray-300);
+  border-radius: 0.25rem;
+  margin-top: -7rem;
+  transition: var(--transition);
+  padding: 1rem;
+  border-left: 8px solid var(--text-color);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.show-success-notification {
+  margin-top: 4rem;
+  border-color: green;
+}
+.show-error-notification {
+  margin-top: 2rem;
+  border-color: red;
+}

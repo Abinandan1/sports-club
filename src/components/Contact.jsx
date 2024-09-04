@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Wrapper } from "../wrappers/Contact";
 import { Form } from "react-router-dom";
+import { notify } from "./Notification";
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
@@ -12,8 +13,11 @@ export const action = async ({ request }) => {
       data
     );
     console.log(response);
+    document.querySelector(".contact-form").reset();
+    notify.success("Query sent successfully!");
   } catch (error) {
     console.log(error);
+    notify.error("Something went wrong. Please try again!");
   }
   return null;
 };
