@@ -2,6 +2,7 @@ import { Wrapper } from "../wrappers/Hero";
 import tennis from "/assets/images/tennis.jpg";
 import football from "/assets/images/football.jpg";
 import basketball from "/assets/images/basketball.jpg";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <Wrapper id="home">
@@ -14,9 +15,9 @@ const Hero = () => {
               <h1>win</h1>
               <h1>celebrate</h1>
             </div>
-            <button to="/register" className="btn">
+            <Link to="/register" className="btn">
               join now
-            </button>
+            </Link>
           </div>
           <div className="right">
             <div className="hero-images-container">
