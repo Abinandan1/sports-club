@@ -16,6 +16,7 @@ import rugbyCoaching from "/assets/images/rugby-coaching.jpg";
 import mountainClimbing from "/assets/images/mountain-climbing-children.jpg";
 import Footer from "./Footer";
 import { useState } from "react";
+import SecondaryNavbar from "./SecondaryNavbar";
 
 const KnowMore = () => {
   document.addEventListener("scroll", (e) => {
@@ -38,7 +39,7 @@ const KnowMore = () => {
   const [openModal, setOpenModal] = useState(false);
   return (
     <Wrapper>
-      <nav>
+      {/* <nav>
         <div className="section-center">
           <div className="navbar">
             <Link to="/" className="logo show-logo">
@@ -60,7 +61,8 @@ const KnowMore = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
+      <SecondaryNavbar />
       {/* BACK BTN */}
       <article>
         <div className="section-center">

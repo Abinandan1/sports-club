@@ -1,31 +1,32 @@
-import axios from "axios";
-import { Wrapper } from "../wrappers/Contact";
 import { Form, useNavigation } from "react-router-dom";
-import { notify } from "./Notification";
+import { Wrapper } from "../wrappers/Register";
+import { SecondaryNavbar } from "../components";
+import { notify } from "../components/Notification";
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
   try {
     const response = await axios.post(
-      "https://sports-club-server.onrender.com/api/v1/email/contact",
+      "https://sports-club-server.onrender.com/api/v1/email/register",
       data
     );
-    document.querySelector(".contact-form").reset();
-    notify.success("Query sent successfully!");
+    document.querySelector(".register-form").reset();
+    notify.success("Registered successfully!");
   } catch (error) {
-    notify.error("Something went wrong. Please try again!");
+    notify.error("Currently we are working on this functionality!");
   }
   return null;
 };
-const Contact = () => {
+const Register = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
-    <Wrapper id="contact">
-      <div className="section-center">
+    <Wrapper>
+      <SecondaryNavbar />
+      <div className="form-center">
         <div className="contact">
-          <h6>Feel free to get in touch with us.</h6>
-          <Form method="post" className="contact-form">
+          <h6>Register</h6>
+          <Form method="post" className="register-form">
             <div className="form-row">
               <input
                 name="name"
@@ -44,16 +45,24 @@ const Contact = () => {
             </div>
             <div className="form-row">
               <input
-                name="query"
-                type="text"
-                placeholder="query"
+                name="email"
+                type="email"
+                placeholder="email"
+                className="form-input"
+              />
+            </div>
+            <div className="form-row">
+              <input
+                name="password"
+                type="password"
+                placeholder="password"
                 className="form-input"
               />
             </div>
             <button
               disabled={isSubmitting}
               type="submit"
-              className="btn contact-btn"
+              className="btn register-btn"
             >
               {isSubmitting ? "submitting..." : "submit"}
             </button>
@@ -63,4 +72,4 @@ const Contact = () => {
     </Wrapper>
   );
 };
-export default Contact;
+export default Register;

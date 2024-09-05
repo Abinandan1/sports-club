@@ -8,3 +8,4 @@ export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";
 export { default as KnowMore } from "./KnowMore";
 export { default as Notification } from "./Notification";
+export { default as SecondaryNavbar } from "./SecondaryNavbar";

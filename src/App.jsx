@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, Login, Register } from "./pages";
 import { KnowMore } from "./components";
 import { createContext, useContext, useEffect, useState } from "react";
 import { action as contactAction } from "./components/Contact";
+import { action as registerAction } from "./pages/Register";
+import { action as loginAction } from "./pages/Login";
 const AppContext = createContext();
 const router = createBrowserRouter([
   {
@@ -13,6 +15,16 @@ const router = createBrowserRouter([
   {
     path: "/about-us",
     element: <KnowMore />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+    action: registerAction,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    action: loginAction,
   },
 ]);
 const getThemeFromLocalStorage = () => {

@@ -95,12 +95,12 @@ const Navbar = ({ showSidebar, setShowSidebar, theme, setTheme }) => {
             </li>
           </ul>
           <div className="nav-buttons-container">
-            <button to="/register" className="btn">
+            <Link to="/register" className="btn">
               join us
-            </button>
-            <button to="/login" className="btn btn-hipster">
+            </Link>
+            <Link to="/login" className="btn btn-hipster">
               login
-            </button>
+            </Link>
             <div className="theme">
               <BsMoonFill className="theme-icon" />
               <div
