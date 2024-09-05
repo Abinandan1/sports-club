@@ -5,18 +5,14 @@ import { notify } from "./Notification";
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  console.log(data);
-
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/v1/email/contact",
+      "https://sports-club-server.onrender.com/api/v1/email/contact",
       data
     );
-    console.log(response);
     document.querySelector(".contact-form").reset();
     notify.success("Query sent successfully!");
   } catch (error) {
-    console.log(error);
     notify.error("Something went wrong. Please try again!");
   }
   return null;
