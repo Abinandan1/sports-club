@@ -24,12 +24,12 @@ const Navbar = ({ showSidebar, setShowSidebar, theme, setTheme }) => {
     <Wrapper theme={theme}>
       <div className="section-center">
         <div className="navbar">
-          <div onClick={() => useNavigate()("/")} className="logo show-logo">
+          <Link to="/" className="logo show-logo">
             SC
-          </div>
-          <div onClick={() => useNavigate()("/")} className="logo show-logo-1">
+          </Link>
+          <Link to="/" className="logo show-logo-1">
             S<span>ports</span>C<span>lub</span>
-          </div>
+          </Link>
           <ul className="nav-links">
             <li>
               <a
